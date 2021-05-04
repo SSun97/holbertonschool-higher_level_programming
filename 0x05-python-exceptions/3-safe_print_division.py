@@ -9,5 +9,5 @@ def safe_print_division(a, b):
             print("Inside result: {}".format(div))
             return div
         else:
-            print("Inside result: None")
+            print("Inside result: {}".format(None))
             return None
