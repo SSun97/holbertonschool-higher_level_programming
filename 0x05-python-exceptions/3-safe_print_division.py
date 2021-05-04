@@ -8,6 +8,3 @@ def safe_print_division(a, b):
         if div:
             print("Inside result: {}".format(div))
             return div
-        else:
-            print("Inside result: {}".format(None))
-            return None
