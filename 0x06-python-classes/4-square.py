@@ -9,7 +9,7 @@ This module provides a simple version of class
 class Square:
     """The class definition"""
 
-    def __init__(self, size):
+    def __init__(self, size=0):
         """init"""
         self.size = size
 
