@@ -1,0 +1,59 @@
+Import function from module:
+
+    >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+Test two matrix argument:
+
+    >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+    matrix([[ 7, 10],
+            [15, 22]])
+
+Test singly empty matrix:
+    >>> lazy_matrix_mul([], [[3]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a can't be empty
+
+Test singly empty matrix:
+    >>> lazy_matrix_mul([[]], [[3]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_a can't be empty
+
+Test doubly empty matrix:
+    >>> lazy_matrix_mul([[3]], [[]])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_b can't be empty
+
+Test singly empty matrix 2:
+    >>> lazy_matrix_mul([[4]], [])
+    Traceback (most recent call last):
+    ...
+    ValueError: m_b can't be empty
+
+Test string arg:
+    >>> lazy_matrix_mul("foo", [[9]])
+    Traceback (most recent call last):
+    ...
+    TypeError: m_a must be a list
+
+Test a bad rows:
+    >>> lazy_matrix_mul([[1, 2], [3, 4, 5], [3, 4]], [[5, 6, 1], [7, 8, 2]])
+    Traceback (most recent call last):
+    ...
+    TypeError: each row of m_a must should be of the same size
+
+Test missing 1 arg:
+    >>> lazy_matrix_mul([[3]])
+    Traceback (most recent call last):
+    ...
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+Test missing 2 args:
+    >>> lazy_matrix_mul()
+    Traceback (most recent call last):
+    ...
+    TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+
