@@ -24,7 +24,9 @@
 89
 
 >>> add_integer(0, float('-inf'))
-89
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
 
 >>> add_integer("School", 4)
 Traceback (most recent call last):
