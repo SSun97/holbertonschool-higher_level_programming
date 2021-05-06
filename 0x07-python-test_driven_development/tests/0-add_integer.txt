@@ -20,6 +20,9 @@
 >>> add_integer(0, 100.3)
 100
 
+>>> add_integer(0, float('inf'))
+89
+
 >>> add_integer("School", 4)
 Traceback (most recent call last):
 ...
