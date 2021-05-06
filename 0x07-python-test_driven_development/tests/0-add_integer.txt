@@ -45,7 +45,7 @@ Traceback (most recent call last):
 ...
 TypeError: b must be an integer
 
->>> add_integer(None)
+>>> add_integer(None, 5)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
@@ -57,7 +57,8 @@ TypeError: a must be an integer
 >>> add_integer()
 Traceback (most recent call last):
 ...
-TypeError: add_integer() missing 1 required positional argument: 'a'
+TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b'
+
 
 
 
