@@ -7,10 +7,6 @@
 class MyList(list):
     """Same as moulde """
 
-    def __init__(self):
-        """init a function"""
-
-        super().__init__()
 
     def print_sorted(self):
         """Print sorted list"""
