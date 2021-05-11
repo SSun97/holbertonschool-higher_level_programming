@@ -72,6 +72,9 @@ Test integer_validator(age)
 Test integer_validator(age)
 
     >>> bg.integer_validator("age", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: age must be an integer
 
 Test integer_validator(age)
 
