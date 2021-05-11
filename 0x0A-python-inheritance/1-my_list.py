@@ -7,7 +7,6 @@
 class MyList(list):
     """Same as moulde """
 
-
     def print_sorted(self):
         """Print sorted list"""
 
