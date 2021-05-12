@@ -16,6 +16,6 @@ class Student:
         else:
             return self.__dict__.copy()
 
-        def reload_from_json(self, json):
-            for k, v in json.items():
-                self.__dict__[k] = v
+    def reload_from_json(self, json):
+        for k, v in json.items():
+            self.__dict__[k] = v
