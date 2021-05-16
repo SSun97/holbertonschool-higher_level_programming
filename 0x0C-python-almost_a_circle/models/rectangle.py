@@ -18,6 +18,12 @@ class Rectangle(Base):
 
         return self.__width * self.__height
 
+    def display(self):
+        """disolay a rectangle"""
+
+        for _ in range(self.__height):
+            print("#" * self.__width)
+
     @property
     def width(self):
         return self.__width
