@@ -36,6 +36,14 @@ class Rectangle(Base):
                                                 self.__width,
                                                 self.__height)
 
+    def update(self, *args):
+        """update attributes of instances"""
+
+        l = [self.id, self.__width, self.__height, self.__x, self.__y]
+        for i in range(len(args)):
+            l[i] = args[i]
+        self.__init__(l[1], l[2], l[3], l[4], l[0])
+
     @property
     def width(self):
         return self.__width
