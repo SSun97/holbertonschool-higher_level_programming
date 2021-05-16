@@ -40,8 +40,22 @@ class Rectangle(Base):
         """update attributes of instances"""
 
         l = [self.id, self.__width, self.__height, self.__x, self.__y]
-        for i in range(len(args)):
-            l[i] = args[i]
+
+        if len(args) >= 1:
+            for i in range(len(args)):
+                l[i] = args[i]
+        else:
+            for key in kwargs:
+                if key == 'id':
+                    l[0] = kwargs[key]
+                if key == 'width':
+                    l[1] = kwargs[key]
+                if key == 'height':
+                    l[2] = kwargs[key]
+                if key == 'x':
+                    l[3] = kwargs[key]
+                if key == 'y':
+                    l[4] = kwargs[key]
         self.__init__(l[1], l[2], l[3], l[4], l[0])
 
     @property
