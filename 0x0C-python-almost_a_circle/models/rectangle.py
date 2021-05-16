@@ -35,11 +35,11 @@ class Rectangle(Base):
                                                 self.__y,
                                                 self.__width,
                                                 self.__height)
+
     def update(self, *args, **kwargs):
         """update attributes of instances"""
 
-        l = [self.id, self.__width, self.__height,
-                    self.__x, self.__y]
+        l = [self.id, self.__width, self.__height, self.__x, self.__y]
         l1 = ['id', 'width', 'height', 'x', 'y']
 
         if len(args) >= 1:
