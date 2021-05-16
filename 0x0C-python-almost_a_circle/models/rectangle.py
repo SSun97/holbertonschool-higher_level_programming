@@ -35,28 +35,22 @@ class Rectangle(Base):
                                                 self.__y,
                                                 self.__width,
                                                 self.__height)
-
     def update(self, *args):
         """update attributes of instances"""
 
-        l = [self.id, self.__width, self.__height, self.__x, self.__y]
+        l = [self.id, self.__width, self.__height,
+                    self.__x, self.__y]
+        l1 = ['id', 'width', 'height', 'x', 'y']
 
         if len(args) >= 1:
             for i in range(len(args)):
                 l[i] = args[i]
+            self.__init__(l[1], l[2], l[3], l[4], l[0])
         else:
-            for key in kwargs:
-                if key == 'id':
-                    l[0] = kwargs[key]
-                if key == 'width':
-                    l[1] = kwargs[key]
-                if key == 'height':
-                    l[2] = kwargs[key]
-                if key == 'x':
-                    l[3] = kwargs[key]
-                if key == 'y':
-                    l[4] = kwargs[key]
-        self.__init__(l[1], l[2], l[3], l[4], l[0])
+            for k, v in kwargs.items():
+                for i in range(len(l1)):
+                    if k == l1[i]:
+                        setattr(self, l1[i], v)
 
     @property
     def width(self):
