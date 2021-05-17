@@ -17,15 +17,11 @@ class TestClassMerthods(unittest.TestCase):
         self.assertEqual(Base(89).id, 89)
 
     def test_Base_to_json_string(self):
-        r1 = Rectangle(10, 7, 2, 8)
-        dictionary = r1.to_dictionary()
+        dictionary = {'id': 12}
         json_dictionary = Base.to_json_string([dictionary])
-        d = {'x': 2, 'width': 10, 'id': 2, 'height': 7, 'y': 8}
-        j = [{"x": 2, "width": 10, "id": 2, "height": 7, "y": 8}]
         self.assertEqual(type(json_dictionary), str)
-        self.assertEqual(dictionary, d)
-#        self.assertEqual(sorted(json_dictionary), sorted(j))
-        self.assertEqual(type(dictionary), dict)
+        j = '[{"id": 12}]'
+        self.assertEqual(json_dictionary, j)
 
 
 
