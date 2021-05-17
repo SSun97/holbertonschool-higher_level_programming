@@ -29,6 +29,10 @@ class TestClassMerthods(unittest.TestCase):
         d = [{"id": 89}]
         self.assertEqual(dictionary, d)
 
+    def test_Rectangle(self):
+        r = Rectangle(1, 2, 3, 4)
+        self.assertIsInstance(r, Rectangle)
+
 
 
 
