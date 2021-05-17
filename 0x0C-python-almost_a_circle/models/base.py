@@ -31,9 +31,9 @@ class Base:
 
         if list_objs is None:
             list_objs = []
-        json_string = ""
+        json_string_list = []
         for obj in list_objs:
-            json_string = json_string\
-                          + Base.to_json_string(obj.to_dictionary())
+            json_string_list.append(obj.to_dictionary())
+        json_string = cls.to_json_string(json_string_list)
         with open("Rectangle.json", "w") as f:
             f.write(json_string)
