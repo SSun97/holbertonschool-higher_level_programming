@@ -68,7 +68,7 @@ class Base:
             return []
         else:
             with open(file_path, 'r') as f:
-                list = json.loads(f.read())
+                list = cls.from_json_string(f.read())
         list_rect = []
         for rect in list:
             list_rect.append(cls.create(**rect))
