@@ -44,5 +44,7 @@ class Square(Rectangle):
                         setattr(self, l1[i], v)
 
     def to_dictionary(self):
+        """function to display the attributes dictionary"""
+
         return {"id": self.id, "size": self.width,
                 "x": self.x, "y": self.y}
