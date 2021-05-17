@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """almost a circle"""
 import json
+import os
 
 
 class Base:
