@@ -35,5 +35,5 @@ class Base:
         for obj in list_objs:
             json_string_list.append(obj.to_dictionary())
         json_string = cls.to_json_string(json_string_list)
-        with open("Rectangle.json", "w") as f:
+        with open(cls.__name__ + ".json", "w") as f:
             f.write(json_string)
