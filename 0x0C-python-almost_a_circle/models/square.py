@@ -42,3 +42,7 @@ class Square(Rectangle):
                 for i in range(len(l1)):
                     if k == l1[i]:
                         setattr(self, l1[i], v)
+
+    def to_dictionary(self):
+        return {"id": self.id, "size": self.width,
+                "x": self.x, "y": self.y}
