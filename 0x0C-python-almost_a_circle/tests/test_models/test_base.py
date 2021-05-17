@@ -31,6 +31,7 @@ class TestClassMerthods(unittest.TestCase):
 
     def test_Rectangle(self):
         r = Rectangle(1, 2, 3, 4)
+        self.assertEqual(r, j)
         self.assertIsInstance(r, Rectangle)
 
 
