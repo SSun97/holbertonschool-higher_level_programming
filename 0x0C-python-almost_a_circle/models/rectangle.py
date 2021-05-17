@@ -53,6 +53,8 @@ class Rectangle(Base):
                         setattr(self, l1[i], v)
 
     def to_dictionary(self):
+        """get the dictionary of a class"""
+
         return {"id": self.id, "width": self.__width, "height": self.__height,
                 "x": self.__x, "y": self.__y}
 
