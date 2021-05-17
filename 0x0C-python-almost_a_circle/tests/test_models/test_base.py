@@ -11,6 +11,7 @@ class TestClassMerthods(unittest.TestCase):
 
     def test_Base_id(self):
         self.assertEqual(Base().id, 1)
+        self.assertEqual(Base(89).id, 89)
 
     def setUp(self):
         '''Imports module, instantiates class'''
