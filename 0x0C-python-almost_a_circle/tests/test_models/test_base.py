@@ -23,6 +23,12 @@ class TestClassMerthods(unittest.TestCase):
         j = '[{"id": 12}]'
         self.assertEqual(json_dictionary, j)
 
+    def test_Base_from_json_string(self):
+        json_string = '[{"id": 89}]'
+        dictionary = Base.from_json_string(json_string)
+        d = [{"id": 89}]
+        self.assertEqual(dictionary, d)
+
 
 
 
