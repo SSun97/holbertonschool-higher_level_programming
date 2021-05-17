@@ -14,5 +14,14 @@ class TestClassMerthods(unittest.TestCase):
         self.assertEqual(Base(89).id, 89)
 
 
+    def test_A_nb_objects_private(self):
+        '''Tests if nb_objects is private class attribute.'''
+        self.assertTrue(hasattr(Base, "_Base__nb_objects"))
+
+    def test_B_nb_objects_initialized(self):
+        '''Tests if nb_objects initializes to zero.'''
+        self.assertEqual(getattr(Base, "_Base__nb_objects"), 0)
+
+
 if __name__ == '__main__':
     unittest.main()
