@@ -33,6 +33,7 @@ if __name__ == "__main__":
     if list == []:
         print()
     else:
-        print(list, sep=", ")
+        for item in list:
+            print(list, sep=", ")
 
     db.close()
