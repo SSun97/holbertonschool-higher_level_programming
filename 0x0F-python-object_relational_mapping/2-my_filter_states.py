@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states ORDER BY id")
+    cur.execute("SELECT * FROM {} ORDER BY {}".format('states', 'id'))
 
     for row in cur.fetchall():
         if row[1] == sys.argv[4]:
