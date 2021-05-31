@@ -34,6 +34,6 @@ if __name__ == "__main__":
         print()
     else:
         for item in list:
-            print(list, sep=", ")
+            print(item, sep=", ")
 
     db.close()
