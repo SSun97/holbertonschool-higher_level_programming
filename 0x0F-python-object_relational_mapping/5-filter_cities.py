@@ -22,9 +22,6 @@ if __name__ == "__main__":
          port=3306)
 
     cur = db.cursor()
-    print("SELECT cities.name FROM cities, states\
-                WHERE cities.state_id = states.id\
-                AND states.name='{}'".format(sys.argv[4]))
     cur.execute("SELECT cities.name FROM cities, states\
                 WHERE cities.state_id = states.id\
                 AND states.name='{}'".format(sys.argv[4]))
