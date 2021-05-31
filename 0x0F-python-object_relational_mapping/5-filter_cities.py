@@ -26,14 +26,12 @@ if __name__ == "__main__":
                 WHERE cities.state_id = states.id\
                 AND states.name='{}'".format(sys.argv[4]))
 
-    list = []
+    list1 = []
     for row in cur.fetchall():
-        list.append(row[0])
+        list1.append(row[0])
 
-    if list == []:
+    if list1 == []:
         print()
     else:
-        for item in list:
-            print(item, sep=", ")
-
+        print(", ".join(i for i in list1))
     db.close()
