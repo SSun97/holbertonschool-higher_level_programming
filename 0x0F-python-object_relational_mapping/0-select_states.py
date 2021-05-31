@@ -18,6 +18,6 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states ORDER BY id")
 
     for row in cur.fetchall():
-        print(row[0])
+        print(row)
 
     db.close()
