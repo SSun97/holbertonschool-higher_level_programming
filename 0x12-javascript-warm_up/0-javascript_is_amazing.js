@@ -1,4 +1,4 @@
 #!/usr/bin/node
 // The first JavaScript code
-myVar = "JavaScript is amazing";
+const myVar = 'JavaScript is amazing';
 console.log(myVar);
