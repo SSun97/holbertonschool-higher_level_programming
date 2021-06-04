@@ -9,9 +9,11 @@ class Rectangle {
       this.height = h;
     }
   }
-   print () {
+
+  print () {
     console.log(('X'.repeat(this.width) + '\n').repeat(this.height).split('')
       .slice(0, -1).join(''));
+  }
 }
 
 module.exports = Rectangle;
